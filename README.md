@@ -26,7 +26,17 @@ install it as a dependency in your project or use it as a standalone binary.
 
 ### Running
 
+`git2txt` accepts a `source`, which may be a remote Git URL or a local path to an existing
+Git repository. `source` is optional and defaults to the current directory.
+
 ```bash
+# scan the current directory (must be inside a Git repository)
+cargo r --
+
+# scan a local repository, tracked + untracked-but-not-gitignored files
+cargo r -- ./path/to/repo
+
+# clone and scan a remote repository
 cargo r -- <GIT REPO URL>
 ```
 
