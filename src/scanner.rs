@@ -23,7 +23,7 @@ impl Scanner {
         }
     }
 
-    pub fn scan(&self) -> BoxFuture<Result<()>> {
+    pub fn scan(&self) -> BoxFuture<'_, Result<()>> {
         debug!(path=?self.input_path.display(), "Scanning...");
 
         async move {
